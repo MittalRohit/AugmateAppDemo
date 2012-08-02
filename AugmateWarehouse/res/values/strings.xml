@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Wellcome to Warehouse Augmate App.</string>
+    <string name="app_name">Augmate Warehouse</string>
+    <string name="orderTitle">Orders</string>
+    <string name="productTitle">Products</string>
+    <string name="mapTitle">Map</string>
+
+</resources>
