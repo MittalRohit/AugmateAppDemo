@@ -10,16 +10,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class orderArrayAdapter extends ArrayAdapter<Order> {
+public class productArrayAdapter extends ArrayAdapter<orderProducts> {
 	
 	private final Context context;
-	private final ArrayList<Order> orders;
+	private final ArrayList<orderProducts> products;
 
-	public orderArrayAdapter(Context context,ArrayList<Order> objects) {
-		super(context, R.layout.order_list_row, objects);
-		// TODO Auto-generated constructor stub
+	public productArrayAdapter(Context context,ArrayList<orderProducts> objects) {
+		super(context, R.layout.order_list_row, objects);		
 		this.context= context;
-		this.orders= objects;		
+		this.products= objects;		
 	}
 	
 	@Override
@@ -31,15 +30,15 @@ public class orderArrayAdapter extends ArrayAdapter<Order> {
 		TextView textOrderNum = (TextView) rowView.findViewById(R.id.textOrderNum);
 		TextView textState = (TextView) rowView.findViewById(R.id.textState);
 		
-		textOrderNum.setText(orders.get(position).toString());
-		String state="No started";
-		if(orders.get(position).status == 1)
-			state="In progress";
-		textState.setText(state);
-		
+		textOrderNum.setText(products.get(position).toString());
+		String state="Not picked";
+		if(products.get(position).Picked == 1)
+			state="Picked";
+		textState.setText(state);		
 		ImageView imageView = (ImageView) rowView.findViewById(R.id.imageStatus);
+		
 		// Change the icon for Windows and iPhone
-		if (orders.get(position).status==1) {
+		if (products.get(position).Picked == 1) {
 			imageView.setImageResource(R.drawable.progress);
 		} else {
 			imageView.setImageResource(R.drawable.wait);

@@ -53,7 +53,6 @@ public class AugmateWarehouseOrder extends Activity {
 				Toast.makeText(getApplicationContext(),
     			"Click ListItem Number " + orders.get(position).idOrder, Toast.LENGTH_LONG)
     			.show();
-				
 				Intent intent = new Intent(context, AugmateWarehouseProduct.class);
 				intent.putExtra("Order", orders.get(position));
 				startActivity(intent);

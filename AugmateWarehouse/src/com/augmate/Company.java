@@ -122,10 +122,7 @@ public class Company implements Serializable{
 					}
 				}catch(JSONException e){
 					Log.e(AugmateWarehouseActivity.class.toString(), "Error creating JSon Object");
-				}
-				
-				
-				
+				}				
 			}
 			
 		}catch(ClientProtocolException e) {
@@ -133,12 +130,10 @@ public class Company implements Serializable{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
+	
 		return orders;
 	}
+	
 	
 	/**
 	 * Parse json for user object
