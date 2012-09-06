@@ -1,0 +1,14 @@
+Sep 05, 2012 1:59:35 PM org.redpin.server.standalone.RedpinStandaloneServer startServer
+SEVERE: Failed to start server
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:96)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:376)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:175)
+	at java.net.ServerSocket.bind(ServerSocket.java:376)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:128)
+	at org.redpin.server.standalone.RedpinStandaloneServer.<init>(RedpinStandaloneServer.java:68)
+	at org.redpin.server.standalone.RedpinStandaloneServer.startServer(RedpinStandaloneServer.java:88)
+	at org.redpin.server.standalone.RedpinStandaloneServer.main(RedpinStandaloneServer.java:53)
+
